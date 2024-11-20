@@ -10,6 +10,7 @@ return {
     'MunifTanjim/nui.nvim',
   },
   cmd = 'Neotree',
+
   keys = {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
@@ -19,6 +20,18 @@ return {
         mappings = {
           ['\\'] = 'close_window',
         },
+      },
+      filtered_items = {
+        visible = true,
+        show_hidden_count = true,
+        hide_dotfiles = false,
+        hide_gitignored = true,
+        hide_by_name = {
+          -- '.git',
+          -- '.DS_Store',
+          -- 'thumbs.db',
+        },
+        never_show = {},
       },
     },
   },
